@@ -15,9 +15,19 @@ function App() {
   const handleCalculate = () => {
     try {
       const calculatedResult = eval(expression);
-      setResult(calculatedResult);
+
+      // Check if the result is undefined or NaN
+      if (
+        calculatedResult === undefined ||
+        isNaN(calculatedResult) ||
+        calculatedResult === Infinity
+      ) {
+        setResult("💀");
+      } else {
+        setResult(calculatedResult);
+      }
     } catch (error) {
-      setResult("Error");
+      setResult("💀");
     }
   };
 
