@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/bootstrap";
+body {
+  background-color: $gray-900 !important;
+}
+#root {
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
